@@ -1,0 +1,15 @@
+version: "3"
+services:
+  konomiDbServer:
+    image: "postgres:11.4"
+    container_name: "tecalliance"
+    environment:
+      POSTGRES_USER: sa
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: tecalliance
+      LC_COLLATE: en_US.utf8
+      LC_CTYPE: en_US.utf8
+      ENCODING: UTF8
+      TEMPLATE: template0
+    ports:
+      - "5432:5432"
